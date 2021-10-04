@@ -1,14 +1,22 @@
 .nav {
+    flex: 1;
+    font-family: $font-1;
+    font-weight: 700;
     text-align: center;
     user-select: none;
     z-index: 10;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-left: 2.5em;
 
     ul {
         overflow: visible;
         padding: 0;
 
         ul {
-            border-radius: 0.25em;
+            border-radius: 0.125em;
             padding: 0;
             left: 0;
             opacity: 0;
@@ -23,13 +31,14 @@
             overflow: hidden;
 
             a {
-                @include fs(13px);
-                padding: 10px;
+                @include fs(17px);
+                padding: 1em;
                 margin: 0;
 
-                &:hover,
-                &:focus {
-                    background: $color-grey-2;
+                &:not(.button):hover,
+                &:not(.button):focus {
+                    color: $color-2;
+                    background: $color-grey-1;
                 }
             }
         }
@@ -41,7 +50,7 @@
         align-items: center;
 
         > li {
-            margin: 0 0 0 32px;
+            margin: 0 0 0 1.75vw;
         }
 
         li:last-child ul {
@@ -56,7 +65,6 @@
         display: block;
 
         &.open {
-
             > a {
                 color: $color-1;
             }
@@ -70,21 +78,22 @@
     }
 
     a {
-        @include fs(16px);
+        @include fs(20px);
         display: block;
         color: $color-0;
         text-decoration: none;
         transition: $transition-1;
 
-        &:hover,
-        &:focus {
+        &:not(.button):hover,
+        &:not(.button):focus {
             color: $color-1;
         }
 
         i {
-            @include fs(12px);
+            @include fs(14px);
             cursor: pointer;
             margin: 0 0 0 6px;
+            opacity: 0.4;
         }
     }
 
