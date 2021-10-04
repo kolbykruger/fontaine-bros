@@ -2861,6 +2861,7 @@ p.simplesearch-results, figure:not(.fig) figcaption.simplesearch-results,
   background: #efeff0;
   mix-blend-mode: saturation;
   mix-blend-mode: color-burn;
+  pointer-events: none;
 }
 .introduction .text h1, .introduction .text .section-heading h2, .section-heading .introduction .text h2, .introduction .text .section-heading .footer-links a, .section-heading .footer-links .introduction .text a, .introduction .text .footer-links .section-heading a, .footer-links .section-heading .introduction .text a, .introduction .text .section-heading h3, .section-heading .introduction .text h3 {
   mix-blend-mode: multiply;
