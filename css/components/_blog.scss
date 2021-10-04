@@ -1,34 +1,10 @@
 .blog {
     margin: 0 auto;
 
-    .blog-widget-container {
-        position: relative;
-        padding-left: 0;
-        padding-right: 0;
-        padding-top: 0 !important;
-        padding-bottom: 10vh !important;
-
-        &::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            width: calc(270px * 2 + 2em);
-            background: none;
-            background: linear-gradient(to right, rgba($color-0, 0), rgba($color-0, 1));
-            pointer-events: none;
-            user-select: none;
-        }
-    }
-
     &.blog-widget {
-        background: $color-0;
-        color: #fff;
-
         .container {
             padding-top: 10vh;
-            padding-bottom: 5vh;
+            padding-bottom: 0;
         }
 
         .group {
@@ -60,7 +36,7 @@
             left: 2em;
             z-index: 2;
             transition: $transition-1;
-            color: #fff;
+            color: $color-0;
 
             &[data-action='next'] {
                 left: auto;
@@ -85,10 +61,63 @@
             margin: 0 auto;
             margin-left: 270px;
             padding-right: 270px;
+
+            @media (max-width: 1920px) {
+                margin-left: 120px;
+                padding-right: 120px;
+            }
+            @media (max-width: 1500px) {
+                margin-left: 60px;
+                padding-right: 60px;
+            }
+            @media (max-width: 1200px) {
+                margin-left: 1.5em;
+                padding-right: 1.5em;
+            }
         }
 
         .post {
             width: calc(33.333% - 4em);
+
+            @media (max-width: 1600px) {
+                width: calc(45% - 4em);
+            }
+            @media (max-width: 1200px) {
+                width: calc(45% - 2em);
+                margin: 3em 1em;
+            }
+        }
+    }
+
+    .blog-widget-slider {
+        position: relative;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        padding-bottom: 3em;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 12%;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background: $color-grey-1;
+            background: linear-gradient(to bottom, $color-grey-1, rgba($color-grey-1, 0));
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 3em;
+            right: 0;
+            bottom: 0;
+            width: calc(270px * 2 + 2em);
+            background: none;
+            background: linear-gradient(to right, rgba(#fff, 0), rgba(#fff, 1));
+            pointer-events: none;
+            user-select: none;
         }
     }
 
@@ -151,7 +180,6 @@
 
                 i {
                     margin-top: 0.5em;
-                    //transition: $transition-1;
                 }
 
                 &:hover,
@@ -159,7 +187,23 @@
                     color: $color-1;
 
                     i {
-                        //transform: translateX(1em);
+                        margin-top: 0.5em;
+                        animation: arrow-move 1.5s ease-in-out infinite;
+
+                        @keyframes arrow-move {
+                            0% {
+                                transform: translateX(-20px);
+                                opacity: 0;
+                            }
+                            50% {
+                                transform: translateX(0);
+                                opacity: 1;
+                            }
+                            100% {
+                                transform: translateX(20px);
+                                opacity: 0;
+                            }
+                        }
                     }
                 }
             }
@@ -169,10 +213,22 @@
     .cover {
         margin: 0 auto;
         overflow: hidden;
+        aspect-ratio: 1.5;
 
         img {
             width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
             transition: $transition-1;
+        }
+
+        a:hover,
+        a:focus {
+            img {
+                transform: scale(1.08);
+                opacity: 0.8;
+            }
         }
     }
 
