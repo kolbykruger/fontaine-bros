@@ -3,26 +3,11 @@
         padding-top: 0;
     }
     .group {
-        position: relative;
         align-items: center;
 
         display: grid;
         grid-template-columns: repeat(16, 1fr);
         grid-template-rows: 1fr;
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: 15%;
-            bottom: 15%;
-            left: -100%;
-            right: -100%;
-            background: $color-grey-1;
-            //opacity: 0.3;
-            z-index: 2;
-            mix-blend-mode: saturation;
-            mix-blend-mode: color-burn;
-        }
     }
 
     .image {
@@ -32,7 +17,6 @@
         grid-column-end: -1;
         order: 1;
         aspect-ratio: 1;
-        z-index: 1;
 
         img {
             width: 100%;
@@ -44,8 +28,21 @@
     .text {
         position: relative;
         grid-row: 1 / span 1;
-        grid-column: 1 / span 9;
-        z-index: 3;
+        grid-column: 1 / span 6;
+        padding: 6vh 3em;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: -100%;
+            right: -500%;
+            background: $color-grey-1;
+            //opacity: 0.3;
+            mix-blend-mode: saturation;
+            mix-blend-mode: color-burn;
+        }
 
         h1 {
             @include fluid('font-size', 2.5rem, 3.5rem);
