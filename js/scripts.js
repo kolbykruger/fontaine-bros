@@ -1,3 +1,19 @@
+//Section Scroll Animations (requires scrollmagic)
+document.addEventListener('DOMContentLoaded', function () {
+    var controller = new ScrollMagic.Controller()
+    var elems = document.querySelectorAll('section')
+
+    for (var i = 0; i < elems.length; i++) {
+        new ScrollMagic.Scene({
+            triggerElement: elems[i],
+            triggerHook: 0.85,
+            reverse: false,
+        })
+            .setClassToggle(elems[i], 'section-active')
+            .addTo(controller)
+    }
+})
+
 //LINK KILLER -- Remove after Homepage Design Approval
 $(document).ready(function () {
     $('a').click(function (e) {
