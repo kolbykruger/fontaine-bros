@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
         new ScrollMagic.Scene({
             triggerElement: elems[i],
             triggerHook: 0.85,
-            reverse: false,
+            reverse: true,
         })
             .setClassToggle(elems[i], 'section-active')
             .addTo(controller)

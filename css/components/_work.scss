@@ -1,6 +1,15 @@
 .work {
     &.section-active {
         .work-item {
+            @for $i from 1 through 10 {
+                &:nth-child(#{$i}) {
+                    transition-delay: 0.05s * $i + 0.3s;
+                }
+            }
+
+            transform: scale(1);
+            opacity: 1;
+
             .image img {
                 filter: grayscale(0);
             }
@@ -27,6 +36,9 @@
         border-radius: 0.125em;
         overflow: hidden;
         grid-column: span 2;
+        transform: scale(0.8);
+        opacity: 0;
+        transition: 0.66s ease;
 
         @media (max-width: 1350px) {
             grid-column: span 4;

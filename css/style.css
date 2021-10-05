@@ -2755,6 +2755,22 @@ p.simplesearch-results, figure:not(.fig) figcaption.simplesearch-results,
 .carousel .slide .button {
   margin: 0.5em 0;
 }
+.features.section-active .features-item {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.features.section-active .features-item:nth-child(1) {
+  -webkit-transition-delay: 0.32s;
+          transition-delay: 0.32s;
+}
+.features.section-active .features-item:nth-child(2) {
+  -webkit-transition-delay: 0.54s;
+          transition-delay: 0.54s;
+}
+.features.section-active .features-item:nth-child(3) {
+  -webkit-transition-delay: 0.76s;
+          transition-delay: 0.76s;
+}
 .features.section-active .features-item .image img {
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
@@ -2779,8 +2795,12 @@ p.simplesearch-results, figure:not(.fig) figcaption.simplesearch-results,
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
+  -webkit-transition: -webkit-clip-path 0.66s ease;
+  transition: -webkit-clip-path 0.66s ease;
+  transition: clip-path 0.66s ease;
+  transition: clip-path 0.66s ease, -webkit-clip-path 0.66s ease;
+  -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+          clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
 }
 .features-item a:hover img, .features-item a:focus img {
   -webkit-filter: grayscale(0);
@@ -2922,6 +2942,10 @@ p.simplesearch-results, figure:not(.fig) figcaption.simplesearch-results,
 .introduction {
   overflow: hidden;
 }
+.introduction.section-active .image img {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
 .introduction .container {
   padding-top: 0;
 }
@@ -3019,6 +3043,10 @@ p.simplesearch-results, figure:not(.fig) figcaption.simplesearch-results,
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  -webkit-transition: 0.66s ease;
+  transition: 0.66s ease;
 }
 .introduction .text {
   position: relative;
@@ -3407,6 +3435,51 @@ table td {
   background-color: #8f1838;
 }
 
+.work.section-active .work-item {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+.work.section-active .work-item:nth-child(1) {
+  -webkit-transition-delay: 0.35s;
+          transition-delay: 0.35s;
+}
+.work.section-active .work-item:nth-child(2) {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+.work.section-active .work-item:nth-child(3) {
+  -webkit-transition-delay: 0.45s;
+          transition-delay: 0.45s;
+}
+.work.section-active .work-item:nth-child(4) {
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+.work.section-active .work-item:nth-child(5) {
+  -webkit-transition-delay: 0.55s;
+          transition-delay: 0.55s;
+}
+.work.section-active .work-item:nth-child(6) {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+.work.section-active .work-item:nth-child(7) {
+  -webkit-transition-delay: 0.65s;
+          transition-delay: 0.65s;
+}
+.work.section-active .work-item:nth-child(8) {
+  -webkit-transition-delay: 0.7s;
+          transition-delay: 0.7s;
+}
+.work.section-active .work-item:nth-child(9) {
+  -webkit-transition-delay: 0.75s;
+          transition-delay: 0.75s;
+}
+.work.section-active .work-item:nth-child(10) {
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
 .work.section-active .work-item .image img {
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
@@ -3428,6 +3501,11 @@ table td {
   overflow: hidden;
   -ms-grid-column-span: 2;
   grid-column: span 2;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  opacity: 0;
+  -webkit-transition: 0.66s ease;
+  transition: 0.66s ease;
 }
 @media (max-width: 1350px) {
   .work-item {
