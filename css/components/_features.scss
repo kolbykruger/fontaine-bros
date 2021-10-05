@@ -1,6 +1,14 @@
 .features {
     &.section-active {
         .features-item {
+            @for $i from 1 through 3 {
+                &:nth-child(#{$i}) {
+                    transition-delay: 0.22s * $i + 0.1s;
+                }
+            }
+
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
             .image img {
                 filter: grayscale(0);
             }
@@ -22,7 +30,8 @@
         display: flex;
         align-items: flex-end;
         justify-content: flex-start;
-        transition: 0.3s ease;
+        transition: clip-path 0.66s ease;
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
 
         a {
             &:hover,
