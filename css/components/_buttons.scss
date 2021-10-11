@@ -46,7 +46,7 @@ $button-background: $color-grey-1;
     color: $button-color;
     border-radius: 0.125em;
     line-height: 1;
-    transition: 150ms ease;
+    transition: 135ms ease;
     text-decoration: none;
     user-select: none;
     cursor: pointer;
@@ -64,6 +64,10 @@ $button-background: $color-grey-1;
     &:active {
         background: darken($button-background, 10%);
         transform: translateY(1px);
+    }
+
+    i {
+        transition: 135ms ease;
     }
 
     i + span {
@@ -95,6 +99,39 @@ $button-background: $color-grey-1;
             box-shadow: none;
             color: $color-2;
             border-color: $color-2;
+        }
+    }
+    &-text {
+        padding-left: 0;
+        padding-right: 0;
+        background: none;
+
+        &:hover,
+        &:focus {
+            background: none;
+            color: $color-2;
+
+            i {
+                transform: translateX(0.35em);
+            }
+        }
+
+        &-white {
+            color: #fff;
+
+            &:hover,
+            &:focus {
+                color: #fff;
+            }
+        }
+    }
+    &-primary {
+        background: $color-1;
+        color: #fff;
+
+        &:hover,
+        &:focus {
+            background: $color-2;
         }
     }
 

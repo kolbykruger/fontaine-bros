@@ -67,29 +67,6 @@
             }
         }
 
-        &-special {
-            grid-column: span 4;
-            aspect-ratio: 6 / 3.55;
-
-            @media (max-width: 1350px) {
-                grid-column: span 8;
-            }
-
-            .explore {
-                color: $color-2;
-                font-family: $font-1;
-                position: absolute;
-                bottom: 2em;
-                left: 2em;
-                font-weight: 600;
-                font-size: 1.5rem;
-
-                i {
-                    margin-left: 0.5em;
-                }
-            }
-        }
-
         .image {
             height: 100%;
 
@@ -189,6 +166,36 @@
                             opacity: 0;
                         }
                     }
+                }
+            }
+        }
+
+        &-special {
+            grid-column: span 4;
+            aspect-ratio: 6 / 3.55;
+
+            @media (max-width: 1350px) {
+                grid-column: span 8;
+            }
+
+            .details {
+                &::before {
+                    background: $color-1;
+                    opacity: 0.8;
+                }
+            }
+
+            .explore {
+                color: $color-2;
+                font-family: $font-1;
+                position: absolute;
+                bottom: 2em;
+                left: 2em;
+                font-weight: 600;
+                font-size: 1.5rem;
+
+                i {
+                    margin-left: 0.5em;
                 }
             }
         }

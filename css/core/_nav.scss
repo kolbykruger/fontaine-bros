@@ -80,9 +80,12 @@
     a {
         @include fs(20px);
         display: block;
-        color: $color-0;
         text-decoration: none;
         transition: $transition-1;
+
+        &:not(.button) {
+            color: $color-0;
+        }
 
         &:not(.button):hover,
         &:not(.button):focus {

@@ -24,10 +24,26 @@
         position: relative;
         flex: 1;
         padding: 8vh 5vw 3vh;
+
+        @media (max-width: 1150px) {
+            flex: 100%;
+            text-align: center;
+        }
     }
 
     &-one {
         padding-left: 270px;
+
+        @media (max-width: 1920px) {
+            padding-left: 120px;
+        }
+        @media (max-width: 1500px) {
+            padding: 5vh 3vw 3vh;
+            padding-left: 60px;
+        }
+        @media (max-width: 1200px) {
+            padding-left: 1.5em;
+        }
 
         &::before {
             content: '';
@@ -45,6 +61,17 @@
     &-two {
         background: $color-grey-2;
         padding-right: 270px;
+
+        @media (max-width: 1920px) {
+            padding-right: 120px;
+        }
+        @media (max-width: 1500px) {
+            padding: 5vh 3vw 3vh;
+            padding-right: 60px;
+        }
+        @media (max-width: 1200px) {
+            padding-right: 1.5em;
+        }
     }
 
     &-links {
@@ -74,6 +101,10 @@
             display: flex;
             align-items: center;
             flex-flow: row wrap;
+
+            @media (max-width: 1150px) {
+                justify-content: center;
+            }
         }
 
         li {
@@ -98,6 +129,10 @@
         display: flex;
         align-items: flex-start;
         margin-top: 3em;
+
+        @media (max-width: 1150px) {
+            justify-content: center;
+        }
     }
 
     &-location {
@@ -150,6 +185,10 @@
                 &::before {
                     clip-path: none;
                 }
+
+                @media (max-width: 1150px) {
+                    background: $color-grey-2;
+                }
             }
 
             &-two {
@@ -169,6 +208,10 @@
     .ewd {
         width: 200px;
         line-height: 1;
+
+        @media (max-width: 1150px) {
+            margin: 0 auto;
+        }
 
         img {
             width: 100%;

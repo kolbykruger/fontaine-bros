@@ -1,4 +1,6 @@
 .features {
+    display: none;
+
     &.section-active {
         .features-item {
             @for $i from 1 through 3 {
