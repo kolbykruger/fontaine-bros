@@ -26,6 +26,10 @@
         grid-template-columns: repeat(3, 1fr);
         place-content: center;
         grid-gap: 2vw;
+
+        @media (max-width: 1920px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     &-item {
@@ -75,7 +79,6 @@
         }
 
         &:nth-of-type(4) {
-            grid-row: span 2;
             a {
                 height: 100%;
                 background: $color-0;
